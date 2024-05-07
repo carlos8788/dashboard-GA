@@ -1,8 +1,49 @@
 <h1>Dashboard</h1>
 
-<div class="container">
-    {{#each products}}
-        <h3>{{this.nombre}}:</h3>
-        <p>descripción: {{this.descripcion}}</p>
-    {{/each}}
-</div>
+<main class="container">
+    <section class="cards-section">
+        <div class="card d-flex flex-row justify-content-center align-items-center gap-4 p-5">
+            <div class="size-custom">
+                <i class="bi bi-basket text-success fs-custom"></i>
+            </div>
+            <div class="card-info">
+                <h3>Productos</h3>
+                <p class="products"></p>
+            </div>
+        </div>
+    </section>
+    <section class="section-formulario">
+        <form>
+            <label for="nombre">nombre</label>
+            <input type="text" name="nombre">
+
+            <label for="stock">stock</label>
+            <input type="text" name="stock">
+
+            <label for="lote">lote</label>
+            <input type="text" name="lote">
+
+            <label for="caducidad">caducidad</label>
+            <input type="date" name="caducidad">
+
+            <label for="descripcion">descripcion</label>
+            <input type="text" name="descripcion">
+
+            <label for="categoria">categoria</label>
+            <input type="text" name="categoria">
+
+            <label for="precio">precio</label>
+            <input type="text" name="precio">
+
+            <div class="buttons">
+                <input type="submit" class="button submit" value="Enviar">
+                <input type="reset" class="button reset">
+            </div>
+        </form>
+    </section>
+    <section>
+        <div class="containerChart">
+            <canvas id="myChart" style="width: 400px;"></canvas>
+        </div>
+    </section>
+</main>
